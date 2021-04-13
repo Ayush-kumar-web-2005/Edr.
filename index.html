@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_dr.APPOINTMENT</title>
+    <link rel="stylesheet" href="./style.css">
+    
+  
+    
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a class="active" href="apponitment.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+            
+          </ul>
+    </div>
+    
+    <div class="container">
+
+        <form id="form1">
+            <h3>SELECT SPECIALITY</h3>
+            <select>
+    
+                <option value='', selected>--SELECT SPECIALITY--</option>
+                <option value=''>Orthopedist</option>
+                <option value=''>Neurologist</option>
+                <option value=''>Cardiologist</option>
+                <option value=''>Dermatologist</option>
+                <option value=''>Psychiatrist</option>
+                <option value=''>Gastrologist</option>
+            </select>
+       
+
+            
+            
+            
+           
+             
+            <div class="btn">
+                <button type='button' id="next1">Next</button>
+            </div>
+        </form>
+
+        <form id="form2">
+            <h3>Pick a City</h3>
+            <select>
+    
+                <option value='', selected>--Select City--</option>
+                <option value=''>Delhi</option>
+                <option value=''>Mumbai</option>
+                <option value=''>Kolkata</option>
+                <option value=''>Pune</option>
+                
+            </select>
+           
+            
+             
+            <div class="btn">
+                <button type='button' id="back1">BACK</button>
+                <button type='button' id="next2">Next</button>
+                
+            </div>
+        </form>
+
+        <form id="form3">
+            <h3>Select doctor</h3>
+            <select>
+    
+                <option value='', selected>--Select Doctor--</option>
+                <option value=''>Dr. Alex</option>
+                <option value=''>Dr. drove</option>
+                <option value=''>Dr. denna</option>
+                <option value=''>Dr. Kamal</option>
+            </select>
+                
+            <input type = "date" placeholder="Select Date"required>
+             
+            <div class="btn">
+                <button type='button' id="back2">Back</button>
+            
+                <button type='submit'>SUBMIT</button>
+            </div>
+        </form>
+        <div class="step">
+            <div id="progress"></div>
+            <div class="col"><small>STEP 1</small></div>
+            <div class="col"><small>STEP 2</small></div>
+            <div class="col"><small>STEP 3</small></div>
+        </div>
+    </div>
+
+    <script>
+        var form1=document.getElementById('form1');
+        var form2=document.getElementById('form2');
+        var form3=document.getElementById('form3');
+        var next1=document.getElementById('next1');
+        var next2=document.getElementById('next2');
+        var back1=document.getElementById('back1');
+        var back2=document.getElementById('back2');
+
+        var progress=document.getElementById('progress');
+
+next1.onclick=function(){
+
+    form1.style.left='-450px';
+    form2.style.left="40px";
+    progress.style.width="240px";
+    }
+    back1.onclick=function(){
+
+form1.style.left='40px';
+form2.style.left="450px";
+progress.style.width="120px";
+}
+
+next2.onclick=function(){
+
+form2.style.left='-450px';
+form3.style.left="40px";
+progress.style.width="360px";
+}
+back2.onclick=function(){
+
+form2.style.left='40px';
+form3.style.left="450px";
+progress.style.width="240px";
+}
+
+    </script>
+</body>
+</html>
